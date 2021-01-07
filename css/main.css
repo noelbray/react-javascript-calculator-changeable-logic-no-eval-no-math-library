@@ -1,0 +1,258 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300;400;500&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Luckiest+Guy&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+* {
+  box-sizing: border-box;
+  font-weight: 500;
+/*   letter-spacing: 0.5px; */
+}
+
+body {
+  background-color: rgb(30, 134, 45);
+/*   background-color: rgb(143, 209, 41); */
+}
+
+#reactRoot {
+  background-color: rgb(143, 209, 41);
+/*   background-color: rgb(133, 199, 31); */
+/*   background-color: rgb(30, 134, 45); */
+  border: 3px solid black;
+  border-radius: 5px;
+/*   display: grid; */
+  font-family: 'Varela Round', sans-serif;
+/*   grid-template-areas:  
+  'display display display display'
+  'logic logic logic logic'
+  'clear clear backspace backspace'
+  'divide multiply subtract add'
+  'seven eight nine add'
+  'four five six equals'
+  'one two three equals'
+  'zero zero decimal equals'; */
+/*   grid-template-columns: 50px 50px 50px 50px; */
+/*   grid-template-columns: 75px 75px 75px 75px; */
+/*   grid-template-rows: 50px 50px 50px 50px; */
+  margin: 40px auto;
+  padding: 10px;
+  width: 321px;
+}
+
+#button-container {
+  display: grid;
+  grid-template-areas: 
+    'clear clear backspace backspace'
+    'divide multiply subtract add'
+    'seven eight nine add'
+    'four five six equals'
+    'one two three equals'
+    'zero zero decimal equals';
+  grid-template-columns: 70px 70px 70px 70px;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px;
+  grid-gap: 5px;
+}
+
+button {
+  background-color: rgb(235, 205, 0);
+/*   background-color: rgb(225, 195, 0); */
+/*   background-color: rgb() */
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:  14px;
+}
+
+#change-calculator-logic {
+  text-align: center;
+}
+
+#change-calculator-logic button {
+  display: block;
+  background-color: #FFA500;
+  font-weight: 500;
+  margin-top: 10px;
+  padding: 3px 5px;
+  width: 100%;
+}
+
+#change-calculator-logic p {
+/*   background-color: #FFA500; */
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#display-container {
+  background-color: black;
+  border: 1px solid black;
+/*   background-color: orange; */
+  border-radius: 5px;
+  height: 54px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+/*   scrollbar-color: red green;
+  scrollbar-width: none; */
+  width: 295px;
+  word-break: break-all;
+  
+}
+
+#display-container::-webkit-scrollbar {
+  width: 10px;
+ /* background-color: rgb(143, 209, 41); /*green*/
+  /* background-color: #FFA500; /*orange*/
+/*   background-color: rgb(30, 144, 255); dodgerblue*/
+  /*background-color: rgb(20, 134, 245); /*blue*/
+  /*background-color: rgb(225, 38, 28); /*red*/
+  border-radius: 4px;
+}
+#display-container::-webkit-scrollbar-button {
+  display: none;
+  height: 10px;
+  border-radius: 3px;
+}
+#display-container::-webkit-scrollbar-thumb {
+  background-color: rgb(225, 38, 28); /*red*/
+  /*background-color: rgb(20, 134, 245); /*blue*/
+  /* background-color: rgb(100,149,237);/* cornflowerblue*/
+/*   background-color: rgb(90, 139, 227); */
+  border-radius: 5px;
+  height: 20px;
+  width: 5px;
+}
+/* #display-container::-webkit-scrollbar-track-piece {
+  background-color: white; 
+} */
+/* #display-container::-webkit-scrollbar-corner {
+  background-color: purple;
+} */
+
+
+/* #display-container:hover {
+  filter: hue-rotate(90deg);
+} */
+
+#input {
+/*   border: 1px solid green; */
+/*   background-color: black; */
+/*   color: rgb(235, 205, 0); */
+/*   color: rgb(252, 106, 3); */
+/*   color: rgb(225, 106, 3); */
+/*   color: rgb(252, 174, 30); */
+/*   color: orange; */
+/*   color: #FFA500; */
+/*   color: rgb(0, 255, 0); */
+  color: rgb(0, 225, 0);
+/*   color: rgb(143, 209, 41); */
+/*   color: rgb(10, 210, 255); */
+  font-size: 14px;
+/*   font-weight: 500; */
+/*   letter-spacing: 1px; */
+  margin: 0;
+  padding: 6px 5px 0 0;
+  text-align: right;
+}
+
+#display {
+/*   background-color: black; */
+/*   border: 1px solid red; */
+/*   color: rgb(235, 205, 0); */
+/*   color: orange; */
+  color: #FFA500;
+/*   color: rgb(0, 255, 0);
+  color: rgb(0, 200, 0); */
+  font-size: 20px;
+/*   font-weight: 700; */
+  margin: 0;
+  padding: 2px 5px 3px 0;
+  text-align: right;
+}
+
+#display-container {
+  grid-area: display;
+}
+
+#change-calculator-logic {
+  grid-area: logic;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+#zero {
+ grid-area: zero;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#add {
+  grid-area: add;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#mulitply {
+  grid-area: multiply;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#decimal {
+  grid-area: decimal;
+  font-size: 21px;
+}
+
+#clear {
+  grid-area: clear;
+}
+
+#backspace {
+  grid-area: backspace;
+}
+
+
+
+
+/* #testDiv {
+  height: 100vh;
+  background-color: green;
+} */
